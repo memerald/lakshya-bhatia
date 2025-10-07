@@ -12,7 +12,7 @@ export default function Contact() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const subject = encodeURIComponent(`${formData.name} - ${formData.phone}`);
+    const subject = `${formData.name} - ${formData.phone}`;
     const body = encodeURIComponent(formData.message);
     const mailtoLink = `mailto:lubhatia@gmail.com?subject=${subject}&body=${body}`;
 
