@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
-import { Code2, Server, Palette, Database, Settings } from 'lucide-react';
+import { Code2, Server, Palette, Settings, MonitorCog } from 'lucide-react';
 
 const skillCategories = [
   {
     icon: Code2,
     title: 'Frontend',
-    skills: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React', 'Vue', 'NextJS'],
+    skills: ['HTML/CSS', 'JavaScript', 'TypeScript', 'React', 'NextJS', 'Vue'],
   },
   {
     icon: Server,
     title: 'Backend',
-    skills: ['NodeJS', 'ExpressJS'],
+    skills: ['NodeJS', 'ExpressJS', 'PostgreSQL', 'MongoDB'],
   },
   {
     icon: Palette,
@@ -30,9 +30,9 @@ const skillCategories = [
     skills: ['Redux', 'Redux Toolkit', 'RTK Query', 'Vuex', 'Pinia'],
   },
   {
-    icon: Database,
-    title: 'Databases & Tools',
-    skills: ['PostgreSQL', 'MongoDB', 'Jira', 'Git', 'Docker', 'Kubernetes'],
+    icon: MonitorCog,
+    title: 'Tools',
+    skills: ['Jira', 'Git', 'Docker', 'Kubernetes'],
   },
 ];
 
@@ -66,16 +66,16 @@ export default function Skills() {
       id="skills"
       className="py-24 bg-gradient-to-br from-[#0F4C75] to-[#1B262C]"
     >
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+      <div className="container px-6 mx-auto">
+        <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-[#BBE1FA] mb-4">
             Technical Expertise
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-[#3282B8] to-[#BBE1FA] mx-auto rounded-full" />
         </div>
 
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {skillCategories.map((category, categoryIndex) => {
               const Icon = category.icon;
               const isVisible = visibleSkills.has(categoryIndex);

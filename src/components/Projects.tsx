@@ -1,7 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
-import { TrendingUp, Shield, Users, Sparkles } from 'lucide-react';
+import { TrendingUp, Shield, Sparkles, MessageCircle } from 'lucide-react';
 
 const projects = [
+  {
+    icon: MessageCircle,
+    title: 'Clothing Social Media',
+    role: 'Frontend Developer',
+    team: 'Collaborated with 5-member team',
+    highlights: [
+      'Built a social platform for sharing clothing design posts, videos, and pictographic ideas',
+      'Developed real-time messaging and notification system for instant engagement',
+      'Implemented core social features - popular posts, direct sharing, and interactive commenting',
+      'Optimized performance using Next.js server components and static content rendering',
+    ],
+    tech: ['NextJS', 'Next Auth', 'TypeScript', 'TailwindCSS', 'Laravel'],
+    gradient: 'from-[#3282B8] to-[#0F4C75]',
+  },
   {
     icon: TrendingUp,
     title: 'Broker Management System',
@@ -56,19 +70,6 @@ const projects = [
     ],
     gradient: 'from-[#0F4C75] to-[#3282B8]',
   },
-  {
-    icon: Users,
-    title: 'Cash Management Application',
-    role: 'Frontend Developer',
-    team: 'Full-stack development',
-    highlights: [
-      'Developed user permission flows for enhanced security',
-      'Created interactive transaction charts with smooth transitions',
-      'Built adaptable, reusable components with dynamic styling',
-    ],
-    tech: ['VueJS', 'Vuex', 'SCSS', 'Django'],
-    gradient: 'from-[#3282B8] to-[#0F4C75]',
-  },
 ];
 
 export default function Projects() {
@@ -114,8 +115,8 @@ export default function Projects() {
         />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container relative z-10 px-6 mx-auto">
+        <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-[#BBE1FA] mb-4">
             Featured Projects
           </h2>
@@ -142,7 +143,7 @@ export default function Projects() {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="relative bg-[#1B262C]/80 backdrop-blur-sm border-2 border-[#3282B8]/30 rounded-2xl p-8 hover:border-[#BBE1FA]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#3282B8]/30">
-                  <div className="flex flex-col lg:flex-row gap-8">
+                  <div className="flex flex-col gap-8 lg:flex-row">
                     <div className="flex-shrink-0">
                       <div
                         className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${project.gradient} p-0.5 group-hover:scale-110 transition-transform duration-300`}

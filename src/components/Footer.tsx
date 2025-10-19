@@ -1,12 +1,12 @@
-import { Mail, Phone, Linkedin, Heart } from 'lucide-react';
+import { Mail, Phone, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-[#1B262C] border-t border-[#3282B8]/30 py-12">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="container px-6 mx-auto">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold text-[#BBE1FA] mb-2">
               Lakshya Bhatia
@@ -46,11 +46,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-[#3282B8]/20 text-center">
+        <div className="pt-12 mt-8 lg:mt-0 border-t border-[#3282B8]/20 text-center">
           <p className="text-[#BBE1FA]/60 text-sm flex items-center justify-center gap-2">
-            <span>&copy; {currentYear} Lakshya Bhatia. Crafted with</span>
-            <Heart size={16} className="text-[#3282B8] fill-current" />
-            <span>and passion</span>
+            <span>&copy; {currentYear} Lakshya Bhatia.</span>
           </p>
         </div>
       </div>

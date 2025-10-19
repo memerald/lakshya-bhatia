@@ -8,15 +8,18 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1B262C] via-[#0F4C75] to-[#1B262C]">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, #BBE1FA 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, #BBE1FA 1px, transparent 0)`,
+            backgroundSize: '40px 40px',
+          }}
+        />
       </div>
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
+      <div className="container relative z-10 px-6 py-20 mx-auto">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-8 inline-block">
+          <div className="inline-block mb-8">
             <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#3282B8] to-[#BBE1FA] p-1 mx-auto">
               <div className="w-full h-full rounded-full bg-[#1B262C] flex items-center justify-center">
                 <span className="text-6xl font-bold text-[#BBE1FA]">LB</span>
@@ -35,8 +38,10 @@ export default function Hero() {
           </p>
 
           <p className="text-lg md:text-xl text-[#BBE1FA]/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Crafting high-performance web applications with expertise in React, Vue, and modern frontend technologies.
-            Proven track record of leading teams and delivering enterprise solutions.
+            I'm a <span className='font-semibold'>Fullstack Developer</span> who builds fast and dynamic
+            web applications using React, Next and other modern technologies. I
+            work closely with teams to create efficient solutions that add real
+            value for both users, and businesses.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
