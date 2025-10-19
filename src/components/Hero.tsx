@@ -20,11 +20,36 @@ export default function Hero() {
       <div className="container relative z-10 px-6 py-20 mx-auto">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-block mb-8">
-            <div className="w-40 h-40 rounded-full bg-gradient-to-br from-[#3282B8] to-[#BBE1FA] p-1 mx-auto">
-              <div className="w-full h-full rounded-full bg-[#1B262C] flex items-center justify-center">
-                <span className="text-6xl font-bold text-[#BBE1FA]">LB</span>
-              </div>
-            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="160"
+              height="160"
+              viewBox="0 0 160 160"
+            >
+              <defs>
+                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3282B8" />
+                  <stop offset="100%" stop-color="#BBE1FA" />
+                </linearGradient>
+              </defs>
+
+              <circle cx="80" cy="80" r="79" fill="url(#grad)" />
+
+              <circle cx="80" cy="80" r="71" fill="#1B262C" />
+
+              <text
+                x="50%"
+                y="50%"
+                text-anchor="middle"
+                dominant-baseline="central"
+                font-family="Arial, sans-serif"
+                font-size="60"
+                font-weight="bold"
+                fill="#BBE1FA"
+              >
+                LB
+              </text>
+            </svg>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-4 text-[#BBE1FA] tracking-tight">
@@ -38,10 +63,10 @@ export default function Hero() {
           </p>
 
           <p className="text-lg md:text-xl text-[#BBE1FA]/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-            I'm a <span className='font-semibold'>Fullstack Developer</span> who builds fast and dynamic
-            web applications using React, Next and other modern technologies. I
-            work closely with teams to create efficient solutions that add real
-            value for both users, and businesses.
+            I'm a <span className="font-semibold">Fullstack Developer</span> who
+            builds fast and dynamic web applications using React, Next and other
+            modern technologies. I work closely with teams to create efficient
+            solutions that add real value for both users, and businesses.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
